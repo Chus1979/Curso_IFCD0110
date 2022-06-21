@@ -9,11 +9,15 @@
 	</head>
     <body class="general">
         <header>
+            
             <nav>
-                <a id="ini" href="index.html"><i class="fa-solid fa-house-chimney"></i>Inicio</a>
-                <a id="con" href="contacto.html"><i class="fa-solid fa-address-card"></i>Contacto</a>
-                <a id="pro" href="promocion.html"><i class="fa-solid fa-arrows-to-dot"></i>Promoción</a>
+                <div class="enlaces">
+                    <a id="ini" href="index.html"><i class="fa-solid fa-house-chimney"></i>Inicio</a>
+                    <a id="con" href="contacto.html"><i class="fa-solid fa-address-card"></i>Contacto</a>
+                    <a id="pro" href="promocion.html"><i class="fa-solid fa-arrows-to-dot"></i>Promoción</a>
+                </div>
             </nav>
+        
         </header>
         <form>
             <!--La etiqueta label es una ayuda al navegador, es un estandar pq en este momento es lo q se busca en los form-->
@@ -26,7 +30,7 @@
                         <label for="nombre">Escribe aquí tu nombre:</label>
                     </td>
                     <td>
-                        <input type="text" value="" id="nombre" name="nombre" size="20" maxlength="15" />
+                        <input type="text" value="" id="nombre" name="nombre" size="20" maxlength="15" class="texto"/>
                     </td>
                 </tr>
                 <tr>
@@ -35,7 +39,7 @@
                     </td>
     
                     <td>
-                        <input type="number" value="" id="edad" name="edad" size="20" maxlength="15" />
+                        <input type="number" value="" id="edad" name="edad" size="20" maxlength="15" class="texto"/>
                     </td>
                 </tr>
                 <tr>
@@ -43,15 +47,12 @@
                         <label for="email">Escribe aquí tu email:</label>
                     </td>
                     <td>
-                        <input type="text" value="" id="email" name="email" size="20" maxlength="15" />
+                        <input type="text" value="" id="email" name="email" size="20" maxlength="15" class="texto" />
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="submit" value="Enviar"/>
-                    </td>
-                    <td>
-
+                    <td colspan="2">
+                        <input type="submit" value="Enviar" class="boton"/>
                     </td>
                 </tr>
             </table>
