@@ -9,7 +9,11 @@
     background: #7c2626;
   }
   
+<<<<<<< HEAD
   /* Encabezado */
+=======
+  /* Header/Encabezado */
+>>>>>>> 509eb3d6a4042055da73ed79be8e4180b09265ff
   .header {
     padding: 30px;
     text-align: center;
@@ -51,7 +55,11 @@
     background: #7c2626;
   }
   
+<<<<<<< HEAD
   /* columna dch */
+=======
+  /* Columna dch */
+>>>>>>> 509eb3d6a4042055da73ed79be8e4180b09265ff
   .rightcolumn {
     float: left;
     width: 25%;
@@ -67,7 +75,11 @@
     padding: 20px;
   }
   
+<<<<<<< HEAD
   /* Añadir caracteristicas a los articulos  */
+=======
+  /* Articulos*/
+>>>>>>> 509eb3d6a4042055da73ed79be8e4180b09265ff
   .card {
     background-color: white;
     padding: 20px;
@@ -75,14 +87,18 @@
     text-align: center;
   }
   
+<<<<<<< HEAD
   /* limpiar floats despues de las columnas */
+=======
+  /* filas */
+>>>>>>> 509eb3d6a4042055da73ed79be8e4180b09265ff
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
   
-  /* Footer */
+  /* Footer/ Pie */
   .footer {
     padding: 20px;
     text-align: center;
@@ -91,7 +107,11 @@
     color: rgb(248, 140, 140);
   }
   
+<<<<<<< HEAD
   /*diseño Responsive  - cuando la pantalla tenga menos de 800px de ancho, haga q los enlaces de navegacion se apilen 1 encima de otro en lugar de 1 al otro lado*/
+=======
+  /*layout Adaptativo - cuando la pantalla tenga menos de 800 px de ancho, haga que los enlaces de navegación se apilen uno encima del otro en lugar de uno al lado del otro */
+>>>>>>> 509eb3d6a4042055da73ed79be8e4180b09265ff
   @media screen and (max-width: 800px) {
     .leftcolumn, .rightcolumn {   
       width: 100%;
@@ -99,7 +119,11 @@
     }
   }
   
+<<<<<<< HEAD
   /* diseño Responsive - cuando la pantalla tenga menos de 400px de ancho, haga q los enlaces de navegacion se apilen 1 encima de otro en lugar de 1 al otro lado */
+=======
+  /* layout Adaptativo- cuando la pantalla tenga menos de 400 px de ancho, haga que los enlaces de navegación se apilen uno encima del otro en lugar de uno al lado del otro*/
+>>>>>>> 509eb3d6a4042055da73ed79be8e4180b09265ff
   @media screen and (max-width: 400px) {
     .topnav a {
       float: none;
