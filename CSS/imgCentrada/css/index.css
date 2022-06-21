@@ -4,7 +4,12 @@
     padding: 0 20px;
     position: relative;
     z-index: 0;
+    
     text-align: center;
+}
+.contenedor{
+    position: relative;
+    padding: 50px;
 }
 a{
     background-color:rgb(131, 241, 181) ;
@@ -23,7 +28,7 @@ a{
     margin-inline-end: auto;
 }
 img{
-    width: 25%;
+    width: 75%;
     padding: 10%;
     position: relative;
     z-index: 0;
@@ -32,7 +37,7 @@ img{
 .pos{
     position: absolute;
     text-align: center;
-    top: 50%;
+    top: 100%;
     left: 25%;
     width: 50%;
     border-color: rgb(0, 140, 255);
