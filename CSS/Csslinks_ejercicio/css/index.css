@@ -27,7 +27,7 @@
 }
 .enlaces{
     position: relative;
-    padding: 20px;
+    padding: 50px;
 }
 a{
     background-color:rgb(131, 241, 181) ;
@@ -136,7 +136,7 @@ table{
 .ultimo{
     position: relative;
     top: 10%;
-    left: 10%;
+    /*left: 10%;*/
 }
 .ultimo h1{
     font-size: 100px;
@@ -148,19 +148,41 @@ table{
     padding-bottom: 1%;
     padding-top: 8%;
 }
-/*----------ANIMACIONES----------*/
-a{
-    transition: 1s;
-}
+/*---------TRANSFORMACIONES----------*/
 .enlaces{
     transform: scale(2, 2);
 }
         /*con esto aumentamos el doble de ancho y el doble de alto
-     el div, en este caso cada boton de enlace*/
-/*--------FIN ANIMACIONES-------*/
+        el div, en este caso cada boton de enlace*/
+table{
+    transform: rotateX(360deg); /*NO FUNCIONA EN CHROME*/
+}
+/*--------FIN TRANSFORMACIONES-------*/
 /*-----TRANSICIONES---------------*/
 .pos{
-    /*top: 50%;
-    position: absolute;*/
     transition: 3s;
 }
+a{
+    transition: 1s;
+}
+table{
+    transition: 3s;
+}
+    /*son el tiempo que tarda en colocarse mis divs en su sitio,
+    de esta forma se ve un movimiento fluido.
+    EN EL CHROME NO ME FUNCIONA*/
+/*--------FIN TRANSICIONES--------*/
+/*---------------ANIMACIONES-----------*/
+@keyframes movimiento {
+    from {left: 100%;}
+    to {left: 0%;}
+  }
+.ultimo h2{
+    animation-name: movimiento;
+    animation-duration: 4s;
+}
+.ultimo{
+    animation-name: movimiento;
+    animation-duration: 4s;
+}
+/*----------FIN ANIMACIONES----------*/
