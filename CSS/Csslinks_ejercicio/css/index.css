@@ -136,12 +136,12 @@ table{
 .ultimo{
     position: relative;
     top: 10%;
-    /*left: 10%;*/
+    left: 10%;
 }
 .ultimo h1{
     font-size: 100px;
     font-weight: bold;
-    padding-left: -10%;
+    padding-left: 10%;
 
 }
 .ultimo h2{
@@ -175,10 +175,14 @@ table{
 /*---------------ANIMACIONES-----------*/
 @keyframes movimiento {
     from {left: 100%;}
+    to {left: 10%;}
+  }
+@keyframes mov {
+    from {left: 100%;}
     to {left: 0%;}
   }
 .ultimo h2{
-    animation-name: movimiento;
+    animation-name: mov;
     animation-duration: 4s;
 }
 .ultimo{
