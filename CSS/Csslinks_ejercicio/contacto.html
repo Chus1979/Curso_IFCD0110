@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<hmtl lang="es">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Ejercicio_enlaces</title>
+		<link href="css/index.css" rel="StyleSheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	</head>
+    <body class="general">
+        <header>
+            
+            <nav>
+                <div class="enlaces">
+                    <a id="ini" href="index.html"><i class="fa-solid fa-house-chimney"></i>Inicio</a>
+                    <a id="con" href="contacto.html"><i class="fa-solid fa-address-card"></i>Contacto</a>
+                    <a id="pro" href="promocion.html"><i class="fa-solid fa-arrows-to-dot"></i>Promoción</a>
+                </div>
+            </nav>
+        
+        </header>
+        <form>
+            <!--La etiqueta label es una ayuda al navegador, es un estandar pq en este momento es lo q se busca en los form-->
+            <!--acordarse que el for es = al id del input-->
+            <!--Al poner el size el tamaño del cuadro de input tiene un tamaño-->
+            <!--maxlength limita los caracteres-->
+            <table>
+                <tr>
+                    <td>
+                        <label for="nombre">Escribe aquí tu nombre:</label>
+                    </td>
+                    <td>
+                        <input type="text" value="" id="nombre" name="nombre" size="20" maxlength="15" class="texto"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="edad">Escribe aquí tu edad:</label>
+                    </td>
+    
+                    <td>
+                        <input type="number" value="" id="edad" name="edad" size="20" maxlength="15" class="texto"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Escribe aquí tu email:</label>
+                    </td>
+                    <td>
+                        <input type="text" value="" id="email" name="email" size="20" maxlength="15" class="texto" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Enviar" class="boton"/>
+                    </td>
+                </tr>
+            </table>
+            
+        </form>
+    </body>
+    </body>
+</hmtl>

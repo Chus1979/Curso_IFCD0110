@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Background</title>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <a href="index.html">
+                <i class="fa-solid fa-house"> </i> Inicio
+            </a>
+            <a href="contacto.html">
+                Contacto
+            </a>
+            <a href="oferta.html">
+                Oferta
+            </a>
+        </nav>
+    </header>
+    <div class="background">
+        <!--
+        Background igual que el de index     
+        -->
+    </div>
+    <li id="datosusuario">Datos del Usuario</li>
+    
+<!--Empieza el formulario-->
+    <form target="_self" name="form" id="form" action="formulario.php" method="get">
+        <!-- Estamos usando lista desordenada para los campos de formulario
+        Es también habitual hacerlo con los elementos de los menús de navegación
+        -->
+        <ul>
+             <!-- 
+                H1 y H2 aquí van dentro de la etqueta UL para que no se solape con los campos,
+                ya que este UL está en posición absoluta
+             -->
+            <h2>Envíanos tus datos</h2>
+            <h1>Cubre el formulario</h1>
+             <!-- 
+                Empiezan los campos de formulario
+             -->
+            <li>
+                <!-- Campo obligatorio tipo texto-->
+                <label for="nombre"><span class="required">*</span> Tu nombre</label><br>
+                <input type="text" name="nombre" id="nombre" required>
+
+            </li>
+            <li>
+                <!-- Campo tipo numérico-->
+                <label for="edad">Tu edad</label><br>
+                <input type="number" name="edad">
+
+            </li>
+            <li>
+                <!-- Campo obligatorio tipo Email-->
+                <label for="email"><span class="required">*</span> Email</label><br>
+                <input type="email" name="email" id="email"  required>
+
+            </li>
+            <li>
+                <!-- Campo tipo Tel (teléfono)-->
+                Teléfono <br>(formato xxx yyy zzz):<br>
+               <input type="tel" name="tel">
+            </li>
+            <li>
+                <!-- inputs tipo Radio-button Llevan el mismo nombre 
+                    para que se reciba un solo dato. Es un solo campo con dos inputs que
+                    se marca además como obligatorio
+                -->
+                <span class="required">*</span> ¿Cómo vendrás al centro?
+                <br>
+                <input type="radio" id="vehiculo" name="comoviene" value="vehiculo" required>
+                <label for="vehiculo">Tengo vehículo</label><br>
+                <input type="radio" id="andando" name="comoviene" value="andando">
+                <label for="andando">Voy andando</label>
+            </li>
+            <li>
+                <!-- inputs tipo checkbox. Cada uno es un campo.
+                -->
+                ¿ Qué vehículos tienes ?<br>
+                <input type="checkbox" id="coche" name="coche" value="coche">
+                <label for="coche">Tengo coche</label><br>
+                <input type="checkbox" id="moto" name="moto" value="moto">
+                <label for="moto">Tengo moto </label><br>
+                <input type="checkbox" id="barco" name="barco" value="barco">
+                <label for="barco">Tengo barco</label>
+            </li>
+            <li>
+                 <!-- Campo tipo select, que crea un menú desplegable con las ociones
+                -->
+                ¿Qué curso quieres?
+                <label for="curso">Elige uno</label>
+
+                <select name="curso" id="curso">
+                      <!-- Este sería el valor seleccionado por defecto
+                -->
+                    <option value="" selected>Elige uno...</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JS">JAVASCRIPT</option>
+                </select>
+            </li>
+            <li>
+                 <!-- Botón de enviar.
+                    Es un input pero no envía valores, 
+                    aunque tiene un value que es el texto que se ve en el botón,  
+                    y por defecto (si no se pone) es "submit".
+                -->
+                <input type="submit" name="Enviar" value="Enviar">
+
+            </li>
+        </ul>
+    </form>
+    <!--Comentamos todo lo de script para que se envie el form y que funcione el php 
+    <script>
+        let formulario = document.getElementById('form');
+        let datosusuario = document.getElementById('datosusuario');
+        formulario.onsubmit = function(e){
+            /*hacer el código aquí*/
+            e.preventDefault();
+            let datos = 'Datos del usuario.- <br>';
+            datos+='Nombre: '+ formulario.elements.nombre.value;
+            datos+='<br>Edad: '+ formulario.elements.edad.value;
+            datos+='<br>Email: '+ formulario.elements.email.value;
+            datos+='<br>Teléfono: '+ formulario.elements.tel.value;
+            datos+='<br>Desplazamiento: '+ formulario.elements.comoviene.value;
+            datos+='<br>Moto: '+ formulario.elements.moto.value;
+            datos+='<br>Coche: '+ formulario.elements.coche.value;
+            datos+='<br>Barco: '+ formulario.elements.barco.value;
+            datos+='<br>Curso: '+ formulario.elements.curso.value;
+            datosusuario.innerHTML = datos;
+
+        }
+        /*declaramos una variable que se coge del formulario(usamos la id form)
+        la acción formulario.onsubmit es igual a la función con el evento y ejecuta su contenido
+        si tarda en cargar, o no lo ejecuta bien, puedes poner:
+        (function(){
+            let formulario = document.getElementById('form');
+            formulario.onsubmit = function(e){
+                e.preventDefault();
+                alert(formulario.elements.nombre.value);
+            }
+        })();
+        otro forma mas:
+            window.onload = function(){
+                let formulario = document.getElementById('form');
+                formulario.onsubmit = function(e){
+                    e.preventDefault();
+                    alert(formulario.elements.nombre.value);
+                }
+            };
+        Tb podemos poner var en lugar de let si existen problemas.
+        */
+    </script>-->
+</body>
+
+</html>
