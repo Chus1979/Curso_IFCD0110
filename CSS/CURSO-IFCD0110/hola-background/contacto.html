@@ -120,7 +120,7 @@
             </li>
         </ul>
     </form>
-    <!--Comentamos todo lo de script para que se envie el form y que funcione el php 
+    <!--Comentamos todo lo de script para que se envie el form y que funcione el php -->
     <script>
         let formulario = document.getElementById('form');
         let datosusuario = document.getElementById('datosusuario');
@@ -138,6 +138,7 @@
             datos+='<br>Barco: '+ formulario.elements.barco.value;
             datos+='<br>Curso: '+ formulario.elements.curso.value;
             datosusuario.innerHTML = datos;
+            datosusuario.style.display='block';
 
         }
         /*declaramos una variable que se coge del formulario(usamos la id form)
@@ -160,7 +161,7 @@
             };
         Tb podemos poner var en lugar de let si existen problemas.
         */
-    </script>-->
+    </script>
 </body>
 
 </html>

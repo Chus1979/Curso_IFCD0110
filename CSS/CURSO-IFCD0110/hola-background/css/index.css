@@ -85,8 +85,10 @@ li{
  }
 #datosusuario{
 height:250px;
-width:40%
+width:40%;
+display:none;
 }
+
  #oferta{
   background-image: url("../img/pizza.jpg");
  }
@@ -148,6 +150,9 @@ a:hover{
   overflow: hidden;
   font-size:20px
 
+ }
+ #datosusuario{
+  transition: 2s;
  }
 
  /*------ ANIMACIONES -----*/
