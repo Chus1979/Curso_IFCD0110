@@ -41,6 +41,7 @@
         echo "<br><br><br><hr><h1>Hola Mundo</h1>";
         //echo json_encode($_SERVER);
         //echo "<h2>Me has llamado por el metodo ".$_SERVER['REQUEST_METHOD']."</h2>";
+        //las etiquetas la podemos abrir en el primer echo y cerrar en el último, de esta forma nos evitamos problemas.Si queremos que salgan en distintas filas hacemos como en html un salto de linea <br>.
         //Son dos condiciones para la variable metodo que se declara con $ y nombre de la variable.
         //Acordarse que el == es q debe ser exactamente igual a lo escrito a continuación.
         //las variables deben estar escritas igual pq son sensibles.
