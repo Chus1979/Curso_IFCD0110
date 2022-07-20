@@ -20,11 +20,24 @@
 				Hola este es un fondo Responsive <!--(adaptativo)-->
 			</h1>
 			<script>
-				alert("hola mundo");
-				document.write("<h1>¡¡Hola que ase!!</h1>");
-				console.log("HOLA MUNDO");/*¡¡¡OJO!!!que esto sale en inspeccionar la consola de la página */
-				console.lo;/*En consola te avisa de los fallos*/
-				document.getElementById('main').innerHTML="<h1>Tocate las narices</h1>";
+				//alert("hola mundo");
+				//document.write("<h1>¡¡Hola que ase!!</h1>");
+				//console.log("HOLA MUNDO");/*¡¡¡OJO!!!que esto sale en inspeccionar la consola de la página */
+				//console.lo;/*En consola te avisa de los fallos*/
+				//document.getElementById('main').innerHTML="<h1>Tocate las narices</h1>";
+				let variable = false;	//Declaramos variables globales
+				let jsOutput = "<h1>¡¡Hola que ase!!</h1>";
+				const num = 5;	//variable que va a tener siempre el mismo valor
+				const num2 = 2;
+				/*if(!variable){//si la variable es = false
+					jsOutput = 4;	//variable local
+				};
+				document.getElementById('main').innerHTML=jsOutput;*/
+				window.onload = function(){ //con el evento onload lo q decimos es q 
+											//hasta q se cargue la ventana no podemos hacer la función
+					jsOutput = num + num2;
+					document.getElementById('main').innerHTML=jsOutput;
+				}
 			</script>
     </body>
 </hmtl>
