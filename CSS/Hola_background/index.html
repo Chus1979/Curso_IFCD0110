@@ -5,18 +5,26 @@
 		<title>Hola Background</title>
 		<!--Vincular los archivos.Llamada al archivo CSS. -->
 		<link href="css/index.css" rel="StyleSheet" type="text/css"/>
+		
 	</head>
     <body>
 		<!--Pág principal para la llamada de un fichero CSS.
 			Vincular hoja de estilos al fichero html.
 			Background con una imagen y un texto centrado;
 			encabezado h1 centrado encima de la img, con color y sombra.-->
-			<div id="fondo"></div>
+			<!--<div id="fondo"></div>Está comentado pq el write me lo hace debajo de la img de fondo-->
 			<h2 class="titulo2 texto-blanco">
 				Esto es un subtítulo
 			</h2>
-			<h1 class="titulo texto-blanco">
+			<h1 class="titulo texto-blanco" id="main">
 				Hola este es un fondo Responsive <!--(adaptativo)-->
 			</h1>
+			<script>
+				alert("hola mundo");
+				document.write("<h1>¡¡Hola que ase!!</h1>");
+				console.log("HOLA MUNDO");/*¡¡¡OJO!!!que esto sale en inspeccionar la consola de la página */
+				console.lo;/*En consola te avisa de los fallos*/
+				document.getElementById('main').innerHTML="<h1>Tocate las narices</h1>";
+			</script>
     </body>
 </hmtl>
