@@ -24,6 +24,8 @@ notas = prompt('Escribe tu nota aquí');
     //Pedimos una recarga para poder hacerlo bien
     //window.location.reload();
 };*/
+/*le ponemos "" en los nº de los casos para que lo lea como un nº
+tb lo podemos poner Number(notas) y de esta forma considera los string como un nº*/
 switch(notas){
     case '0':
     case '1':
