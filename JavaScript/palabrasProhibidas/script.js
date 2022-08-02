@@ -6,35 +6,38 @@ let cadena_de_texto = prompt('escribe tu mensaje'); // con esta var el usuario e
 /**
  * Usando el replace conseguimos q la palabra prohibida se sustituya p una para todos los públicos
  */
- //cadena_de_texto = cadena_de_texto.replace(palabra_prohibida, 'heces');
- //console.log(cadena_de_texto);
- /**
-  * comprobar si hay mayúsculas o minúsculas, antes de reemplazar
-  */
-  let minuscula = cadena_de_texto.toLowerCase();
-  console.log(minuscula);
-  function escribe (cadena,id){
-    for(let i=0; i<minuscula.length; i++){
-
-        let largoFrase = minuscula[i];
-        console.log(largoFrase);
-        if(largoFrase != minuscula.length){
-            i++;
-            console.log(i);
-            console.log(largoFrase);
-            //console.log(minuscula);
-            //console.log(cadena_de_texto);
-            cadena_de_texto = cadena_de_texto.toLowerCase().replace(palabra_prohibida, 'mecachis');//hasta aquí pasa todo a minúsculas
-            //cadena_de_texto = cadena_de_texto.toUpperCase();//y con esto tenemos el resultado en mayúsculas
-            //console.log(cadena_de_texto);
-        }
-    }
-    
-           // console.log(cadena_de_texto);
-    document.getElementById(id).innerHTML= cadena;
-    document.write(cadena_de_texto);
+//cadena_de_texto = cadena_de_texto.replace(palabra_prohibida, 'heces');
+//console.log(cadena_de_texto);
+/**
+ * comprobar si hay mayúsculas o minúsculas, antes de reemplazar
+ */
+function escribe(cadena, id) {
+    document.getElementById(id).innerHTML = cadena;
+    console.log(cadena);
 }
-  
+
+let minuscula = cadena_de_texto.toLowerCase();//pasa todo el texto a minuscula
+console.log(minuscula);
+
+for (let i = 0; i < palabra_prohibida.length; i++) {
+
+    let tabu = palabra_prohibida[i];
+    console.log(tabu);
+    if (minuscula.replace(tabu, '') != minuscula) {
+        console.log(tabu);
+        cadena_de_texto = minuscula.replace(palabra_prohibida, 'mecachis');//hasta aquí pasa todo a minúsculas
+        console.log(minuscula.replace(tabu, 'mecachis'));
+        console.log(cadena_de_texto);
+        //cadena_de_texto = cadena_de_texto.toUpperCase();//y con esto tenemos el resultado en mayúsculas
+        //console.log(cadena_de_texto);
+    }
+}
+
+// console.log(cadena_de_texto);
+//document.getElementById(id).innerHTML= cadena;
+//document.write(cadena_de_texto);
+
+
 /**
  * declaramos una var para que descomponga un string(cadena)
  */
@@ -47,7 +50,7 @@ txtVertical= txtVertical.toUpperCase();*/
 //console.log(txtVertical);
 
 //print(texto_descompuesto);
-escribe (cadena_de_texto, 'main');
+escribe(cadena_de_texto, 'main');
 /**
  * otra forma de hacer un for
  * es como un foreach
