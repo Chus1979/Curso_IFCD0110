@@ -1,37 +1,66 @@
 //tratamineto de string (cadena de texto)
-function escribe (cadena,id){
-    document.getElementById(id).innerHTML= cadena;
-}
-let palabra_prohibida = 'mierda'; //la añadimos para hacer un if y que se remplace esta por una palabra para todos los publicos
+
+let palabra_prohibida = ['mierda', 'joder', 'colorines']; //la añadimos para hacer un if y que se remplace esta por una palabra para todos los publicos
 //let cadena_de_texto = 'hola que tal estamos,he pisado mierda';
 let cadena_de_texto = prompt('escribe tu mensaje'); // con esta var el usuario es el q escribe la frase.
 /**
  * Usando el replace conseguimos q la palabra prohibida se sustituya p una para todos los públicos
  */
  //cadena_de_texto = cadena_de_texto.replace(palabra_prohibida, 'heces');
+ //console.log(cadena_de_texto);
  /**
   * comprobar si hay mayúsculas o minúsculas, antes de reemplazar
   */
-  if(cadena_de_texto.toLowerCase().replace(palabra_prohibida, '') != cadena_de_texto){
-    console.log(palabra_prohibida);
-    cadena_de_texto = cadena_de_texto.toLowerCase().replace(palabra_prohibida, 'heces');//hasta aquí pasa todo a minúsculas
-    console.log(palabra_prohibida);
-    cadena_de_texto = cadena_de_texto.toUpperCase();//y con esto tenemos el resultado en mayúsculas
-    console.log(palabra_prohibida);
+  let minuscula = cadena_de_texto.toLowerCase();
+  console.log(minuscula);
+  function escribe (cadena,id){
+    for(let i=0; i<minuscula.length; i++){
+
+        let largoFrase = minuscula[i];
+        console.log(largoFrase);
+        if(largoFrase != minuscula.length){
+            i++;
+            console.log(i);
+            console.log(largoFrase);
+            //console.log(minuscula);
+            //console.log(cadena_de_texto);
+            cadena_de_texto = cadena_de_texto.toLowerCase().replace(palabra_prohibida, 'mecachis');//hasta aquí pasa todo a minúsculas
+            //cadena_de_texto = cadena_de_texto.toUpperCase();//y con esto tenemos el resultado en mayúsculas
+            //console.log(cadena_de_texto);
+        }
+    }
+    
+           // console.log(cadena_de_texto);
+    document.getElementById(id).innerHTML= cadena;
+    document.write(cadena_de_texto);
 }
+  
 /**
  * declaramos una var para que descomponga un string(cadena)
  */
-let texto_descompuesto = cadena_de_texto.split(' '); //convierte la frase en un array(bucle), es decir separa cada palabra y le asigna una posicion(length, una longitud)
-console.log(texto_descompuesto);
-console.log(texto_descompuesto[1]);
+//let texto_descompuesto = cadena_de_texto.split(' '); //convierte la frase en un array(bucle), es decir separa cada palabra y le asigna una posicion(length, una longitud)
+//console.log(texto_descompuesto);
+//console.log(texto_descompuesto[1]);
 /**let txtVertical = texto_descompuesto[0]+'<br>'+texto_descompuesto[1]+'<br>'+texto_descompuesto[2]+'<br>';
 txtVertical= txtVertical.toUpperCase();*/
 //console.log(texto_descompuesto);
 //console.log(txtVertical);
 
-for(let i=0;i<i.length; i++){
-    
+//print(texto_descompuesto);
+escribe (cadena_de_texto, 'main');
+/**
+ * otra forma de hacer un for
+ * es como un foreach
+ * dentro escribes el nombre de la variable 
+ * y que lo busque en el array 
+ * con el siguiente código si funciona el bucle 
+ * let txt = prompt("escribe texto");
+
+for(const malas of palabra_prohibida){
+    if(txt.replace(malas, '')){
+        txt= txt.replaceAll(malas, 'jamones')
+        console.log(txt);
+    }
+    document.getElementById('main').innerHTML = txt;
 }
-print(texto_descompuesto);
-escribe (txtVertical, 'main');
+ */
