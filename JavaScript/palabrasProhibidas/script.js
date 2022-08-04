@@ -3,6 +3,8 @@
 let palabra_prohibida = ['mierda', 'joder', 'colorines']; //la añadimos para hacer un if y que se remplace esta por una palabra para todos los publicos
 //let cadena_de_texto = 'hola que tal estamos,he pisado mierda';
 let cadena_de_texto = prompt('escribe tu mensaje'); // con esta var el usuario es el q escribe la frase.
+let minuscula = cadena_de_texto.toLowerCase();//pasa todo el texto a minuscula
+console.log(minuscula);
 /**
  * Usando el replace conseguimos q la palabra prohibida se sustituya p una para todos los públicos
  */
@@ -16,20 +18,16 @@ function escribe(cadena, id) {
     console.log(cadena);
 }
 
-let minuscula = cadena_de_texto.toLowerCase();//pasa todo el texto a minuscula
-console.log(minuscula);
-
 for (let i = 0; i < palabra_prohibida.length; i++) {
 
     let tabu = palabra_prohibida[i];
     console.log(tabu);
+
     if (minuscula.replace(tabu, '') != minuscula) {
-        console.log(tabu);
-        cadena_de_texto = minuscula.replace(palabra_prohibida, 'mecachis');//hasta aquí pasa todo a minúsculas
-        console.log(minuscula.replace(tabu, 'mecachis'));
-        console.log(cadena_de_texto);
+        cadena_de_texto = cadena_de_texto.replace(tabu, 'mecachis');
+        console.log(cadena_de_texto.replace(tabu, 'mecachis'));
         //cadena_de_texto = cadena_de_texto.toUpperCase();//y con esto tenemos el resultado en mayúsculas
-        //console.log(cadena_de_texto);
+
     }
 }
 
