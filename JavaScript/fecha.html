@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript ISO Dates</h2>
+
+<p id="demo"></p>
+
+<script>
+let fecha1 = new Date("03-25-2015").getTime();
+let fecha2 = new Date("03-25-2022").getTime();
+if (fecha1<fecha2){
+	let fecha3 = fecha1; //Hacemos esto para intercambiar las posiciones y que conserven el valor 
+    fecha1 = fecha2;	//pero con otro nombre de var
+    fecha2 = fecha3;	//fecha 1 tendría el valor de fecha2 y la 2 conservaría el valor de fecha 1 
+    					//p la asignacion de la nueva var, así conserva el valor y no le afecta la asignación 
+                        //anterior. Intercambiamos pos para que la cant sea positiva
+    }
+    
+let diferencia = fecha1-fecha2;
+
+let diferenciaEnDias = diferencia / 1000 / 3600 / 24;
+console.log(diferenciaEnDias);
+alert('La diferencia es '+diferenciaEnDias);
+let diferenciaAnhos= diferencia / 1000 / 3600 / 24 / 365;
+console.log(diferenciaAnhos);
+alert('La diferencia en años es '+Math.round(diferenciaAnhos))
+
+document.getElementById("demo").innerHTML = 'La diferencia en días es '+diferenciaEnDias;
+document.getElementById("demo").innerHTML = 'La diferencia en años es '+Math.round(diferenciaAnhos);
+</script>
+
+</body>
+</html>
