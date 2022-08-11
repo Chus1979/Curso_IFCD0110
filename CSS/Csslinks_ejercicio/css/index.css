@@ -56,7 +56,6 @@ a {
 
 .pos {
     position: absolute;
-    top: 20%;
     text-align: center;
     left: 25%;
     width: 50%;
@@ -74,7 +73,16 @@ h2 {
     font-size: 30px;
     padding-bottom: 10%;
 }
-
+#aniversario{
+    position: relative;
+    font-size: 50px;
+    font-family: 'Sofia';
+}
+#contador{
+    position: relative;
+    font-size: 90px;
+    font-family: 'Sofia';
+}
 
 /*podemos poner + clases y escribir sólo 1 vez el color, la sombra y centrarlo*/
 
