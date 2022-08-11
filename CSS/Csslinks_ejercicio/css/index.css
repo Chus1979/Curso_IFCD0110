@@ -186,7 +186,11 @@ table .elegir {
     padding-bottom: 1%;
     padding-top: 8%;
 }
-
+footer{
+    color: rgb(7, 245, 185);
+    position: absolute;
+    bottom: 0px;
+}
 
 /*---------TRANSFORMACIONES----------*/
 
