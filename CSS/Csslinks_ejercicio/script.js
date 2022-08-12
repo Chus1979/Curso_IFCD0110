@@ -1,6 +1,13 @@
+//función para llamar a los botones de navegación y el pie de pág.
+//Con ella conseguimos que se pueda modificar uno u otro fichero y aparezca en el resto sin tener q ir uno a uno
+//son peticiones para esperar una promesa
 async function inserta(){
+    //La interfaz Fetch API permite que el navegador web realice solicitudes HTTP a los servidores web
+    //Con await esperamos la respuesta antes de lanzar la funcion, ade+ tiene q ser siempre una función asincrona
+    //debemos esperar la respuesta antes de realizar la función
+
     let header = await fetch('header.html');
-    let elhtml = await header.text();
+    let elhtml = await header.text(); //para q se vea en forma de txt.
     document.getElementById('header').innerHTML = elhtml;
     let footer = await fetch('footer.html');
     let elfooter = await footer.text();
