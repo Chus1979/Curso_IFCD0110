@@ -54,6 +54,7 @@ var x = setInterval(function () {
     ejecutar();
 }, 1000);
 ejecutar();
+
 let formulario=document.getElementById('form');
 formulario.onsubmit = function(evento){ //donde ponemos evento es mejor poner e es una var estandar.
     e.preventDefault();
@@ -81,14 +82,26 @@ function validateDNI(dni) {
         letra = 'TRWAGMYFPDXBNJZSQVHLCKET';
         letra = letra.substring(numero, numero+1);
             if (letra != let) {
-                //alert('Dni erroneo, la letra del NIF no se corresponde');
+                alert('Dni erroneo, la letra del NIF no se corresponde');
                 return false;
             }else{
-                //alert('Dni correcto');
+                alert('Dni correcto');
                 return true;
             }
     }else{
-      //alert('Dni erroneo, formato no válido');
+      alert('Dni erroneo, formato no válido');
         return false;
     }
 }
+/**formulario.onsubmit = function(e){
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const datosForm = Object.fromEntries(formData);
+    const validaDNI = /^\d{8}[-]{1}[A-Z]{1}$/;
+    const datodni= datosForm.dni || false;
+    if(!datodni || !validaDNI.test(datodni)){
+        alert ('Pon tu DNI correcto');
+        location.reload();
+    }
+    document.body.innerHTML = 
+}*/
