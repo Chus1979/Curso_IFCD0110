@@ -1,3 +1,4 @@
+
 //función para llamar a los botones de navegación y el pie de pág.
 //Con ella conseguimos que se pueda modificar uno u otro fichero y aparezca en el resto sin tener q ir uno a uno
 //son peticiones para esperar una promesa
