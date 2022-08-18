@@ -94,15 +94,22 @@ function validateDNI(dni) {
         return false;
     }
 }
-/**formulario.onsubmit = function(e){
+const campoDNI = document.getElementById('dni');
+formulario.onblur = function(e){
+    e.preventDefault();
+    const validaDNI = /^\d{8}[-]{1}[aA-zZ]{1}$/;
+    const datodni = campoDNI.value() || false;
+}
+formulario.onsubmit = function(e){
     e.preventDefault();
     const formData = new FormData(e.target);
     const datosForm = Object.fromEntries(formData);
-    const validaDNI = /^\d{8}[-]{1}[A-Z]{1}$/;
+    const validaDNI = /^\d{8}[-]{1}[aA-zZ]{1}$/;
     const datodni= datosForm.dni || false;
     if(!datodni || !validaDNI.test(datodni)){
         alert ('Pon tu DNI correcto');
         location.reload();
     }
-    document.body.innerHTML = 
-}*/
+    document.getElementsByClassName('general').innerHTML = `tu formulario ha sido enviado`; 
+        
+}
